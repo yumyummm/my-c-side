@@ -6,7 +6,17 @@ ATmega128 MCU와 PC 간의 시리얼 통신을 기반으로 날씨 정보와 시
 
 ## 폴더 구조
 
-<pre><code>```plaintext my-c-side/ ├── mcu-src/ # MCU에서 작동할 C 코드 (main.c 포함) │ └── lib/ # UART, LCD 제어 코드 ├── pc-tools/ # PC에서 날씨, 시간을 가져오는 코드 (weather_sender.c, time_sender.c) ├── sql/ │ ├── table.sql # MySQL에서 UserInfo 테이블 생성용 스크립트 │ └── weather.sql # WeatherDB 생성, 사용자 권한 설정 스크립트 ├── platformio.ini # MCU 빌드 설정 파일 └── README.md ```</code></pre>
+```plaintext
+my-c-side/
+├── mcu-src/          # MCU에서 작동할 C 코드 (main.c 포함)
+│   └── lib/          # UART, LCD 제어 코드
+├── pc-tools/         # PC에서 날씨, 시간을 가져오는 코드 (weather_sender.c, time_sender.c)
+├── sql/
+│   ├── table.sql     # MySQL에서 UserInfo 테이블 생성용 스크립트
+│   └── weather.sql   # WeatherDB 생성, 사용자 권한 설정 스크립트
+├── platformio.ini    # MCU 빌드 설정 파일
+└── README.md
+```
 
 ---
 
