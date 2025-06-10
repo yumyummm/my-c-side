@@ -1,6 +1,6 @@
 # my-c-side
 
-ATmega128 MCU와 PC 간의 시리얼 통신을 기반으로 날씨 정보와 시간 정보를 LCD에 출력하는 프로젝트
+ATmega128 MCU와 PC 간의 시리얼 통신을 기반으로 날씨 정보와 시간 정보를 LCD에 출력하는 미니프로젝트
 
 ---
 
@@ -8,9 +8,11 @@ ATmega128 MCU와 PC 간의 시리얼 통신을 기반으로 날씨 정보와 시
 
 my-c-side/
 ├── mcu-src/ # MCU에서 작동할 C 코드 (main.c 포함)
-│ └── lib/ # I2C, UART, LCD 제어, weather_sender.c 등
-├── pc-tools/ # PC에서 날씨, 시간을 가져오는 코드 (time_sender.c 등)
-├── sql/ # weather.db 등 SQLite 파일 및 관련 SQL 스크립트
+│ └── lib/ # UART, LCD 제어 코드
+├── pc-tools/ # PC에서 날씨, 시간을 가져오는 코드 (weather_sender.c, time_sender.c)
+├── sql/
+│   ├── table.sql # MySQL에서 UserInfo 테이블을 만들기 위한 SQL 스크립트
+│   └── weather.sql # WeatherDB 생성, weatherData6 테이블 생성, 사용자 권한 설정 스크립트
 ├── platformio.ini # MCU 빌드 설정 파일
 └── README.md
 
